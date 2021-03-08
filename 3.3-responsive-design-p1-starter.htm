@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Flexy Forms</title>
+
+	<style>
+		fieldset {
+			border: none;
+			margin: 0.1em 0;
+			background-color: #f6ddce;
+		}
+
+		legend {
+			font-weight: bold;
+			font-size: 1.2em;
+			padding-top: 2em;
+		}
+
+		.bg-pink {
+			background-color: #f6ddce;
+		}
+
+		.btn {
+			border-radius: 4px;
+			box-sizing: content-box;
+			padding: 0.35em 0.75em;
+			font-size: 1.1em;
+		}
+
+		.btn:hover,
+		.btn:focus {
+			cursor: pointer;
+		}
+
+		.btn-purple {
+			background-color: purple;
+			color: white;
+		}
+
+		.btn-purple:hover,
+		.btn-purple:focus {
+			background-color: blueviolet;
+		}
+
+		/* add your CSS below */
+		input[type="text"],
+		input[type="tel"],
+		input[type="url"],
+		input[type="email"],
+		input[type="number"]{
+			display: flex;
+			flex-basis: 300px;
+		}
+
+		select {
+			display: flex;
+			flex-basis:325px;
+		}
+
+		body {
+			
+		}
+
+		.form-fields>div {
+			display: flex;
+			margin: 10px;
+		}
+
+		.form-fields input[type="text"],
+		.form-fields input[type="tel"],
+		.form-fields input[type="url"],
+		.form-fields input[type="email"],
+		.form-fields input[type="number"],
+		.form-fields select { 
+			display: flex;
+			padding: 10px;
+			flex:2;
+		}
+
+
+		.form-fields label {
+			flex: .5;
+		}
+
+		.form-skills {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.form-skills>div {
+
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>Creating Responsive Forms with Flexbox</h1>
+		<p>In this exercise we’ll take Flexbox a bit further, as we explore using Flexbox to build a form that has
+			multiple sections and various form element types.</p>
+	</header>
+	<div>
+		<form>
+			<fieldset>
+				<legend>Personal Info</legend>
+				<div class="form-fields">
+					<div>
+						<label for="name">Name:</label>
+						<input type="text" name="name" id="name" placeholder="your full name">
+					</div>
+					<div>
+						<label for="street-address">Street address:</label>
+						<input type="text" name="street-address" id="street-address" placeholder="your street address">
+					</div>
+					<div>
+						<label for="city">City:</label>
+						<input type="text" name="city" id="city" placeholder="city">
+					</div>
+					<div>
+						<label for="state">State:</label>
+						<select id="state" name="state">
+							<option value="AL">Alabama</option>
+							<option value="AK">Alaska</option>
+							<option value="AZ">Arizona</option>
+							<option value="AR">Arkansas</option>
+							<!-- shortened for brevity -->
+						</select>
+					</div>
+					<div>
+						<label for="street-address">Zip code:</label>
+						<input type="text" name="zip-code" id="zip-code" placeholder="zip code">
+					</div>
+					<div>
+						<label for="email">Email:</label>
+						<input type="email" name="email" id="email" placeholder="confirmation email">
+					</div>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<legend>Registration Info</legend>
+				<p>This info will be on your badge and help us match you with information and events throughout the
+					conference.</p>
+				<div class="form-fields">
+					<div>
+						<label for="description">Primary role:</label>
+						<select id="description" name="description">
+							<option value="designer">Designer</option>
+							<option value="developer">Developer</option>
+							<option value="other">Other</option>
+						</select>
+					</div>
+					<div>
+						<label for="job-title">Job title:</label>
+						<input type="text" name="job-title" id="job-title" placeholder="job title">
+					</div>
+					<div>
+						<label for="company">Company:</label>
+						<input type="text" name="company" id="company" placeholder="company">
+					</div>
+					<div>
+						<label for="phone">Phone:</label>
+						<input type="tel" name="phone" id="phone" placeholder="your phone number">
+					</div>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<legend>Sessions</legend>
+				<p>Listing skills will help us match up our break out sessions!</p>
+				<div class="form-skills">
+					<div>
+						<input type="checkbox" id="css" value="css">
+						<label for="css">CSS</label>
+					</div>
+					<div>
+						<input type="checkbox" id="html" value="html">
+						<label for="html">HTML</label></div>
+					<div>
+						<input type="checkbox" id="js" value="js">
+						<label for="js">JavaScript</label>
+					</div>
+					<div>
+						<input type="checkbox" id="content" value="content">
+						<label for="content">Content Strategy</label>
+					</div>
+					<div>
+						<input type="checkbox" id="ux" value="ux">
+						<label for="ux">UX</label>
+					</div>
+					<div>
+						<input type="checkbox" id="rails" value="rails">
+						<label for="rails">Rails</label>
+					</div>
+					<div>
+						<input type="checkbox" id="node" value="node">
+						<label for="node">Node</label>
+					</div>
+					<div>
+						<input type="checkbox" id="sass" value="sass">
+						<label for="sass">SASS</label>
+					</div>
+					<div>
+						<input type="checkbox" id="mobile" value="mobile">
+						<label for="mobile">Mobile</label>
+					</div>
+				</div>
+			</fieldset>
+
+			<div class="form-submit">
+				<h4>All finished?</h4>
+				<p>We're looking forward to seeing you!</p>
+				<button type="submit" class="btn btn-purple">Register</button>
+			</div>
+		</form>
+	</div>
+</body>
+<!-- Modified content from Lynda.com -->
+
+</html>
